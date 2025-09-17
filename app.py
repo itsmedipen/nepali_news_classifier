@@ -1,6 +1,6 @@
 import re
 import string
-from snowballstemmer import NepaliStemmer
+# from snowballstemmer import NepaliStemmer
 from nltk.corpus import stopwords
 import streamlit as st
 import pickle
@@ -28,7 +28,7 @@ category_map = {
 
 
 # Initialize once
-stemmer = NepaliStemmer()
+# stemmer = NepaliStemmer()
 nepali_stopwords = stopwords.words('nepali')
 eng_punc = string.punctuation
 nep_punct = "।॥’‘“”-—"
@@ -59,7 +59,7 @@ def preprocess_text(text: str) -> str:
     words = [w for w in text.split() if w not in nepali_stopwords]
 
     # Apply stemming
-    words = [stemmer.stemWord(w) for w in words]
+    # words = [stemmer.stemWord(w) for w in words]
 
     return " ".join(words)
 
