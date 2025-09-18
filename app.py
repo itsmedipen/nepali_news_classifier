@@ -12,7 +12,7 @@ nepali_stopwords = set(stopwords.words('nepali'))
 
 with open("vector.pkl", "rb") as f:
     tfidf = pickle.load(f)
-
+    
 # Load model
 with open("random_model.pkl", "rb") as f:
     model = pickle.load(f)
